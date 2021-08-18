@@ -1,0 +1,11 @@
+<div>
+	<h1>Units</h1>
+	<% @units.each do |unit| %>
+		<div class="card card-body mb-3" >
+			Name: <%= unit.name %>
+			Size: <%= unit.size %>
+			Price: <%= unit.price %>
+		</div>
+	<% end %>
+		<%= link_to "Create New Unit", new_unit_path, class: "btn btn-primary" %>
+</div>

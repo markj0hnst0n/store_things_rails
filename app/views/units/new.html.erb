@@ -1,0 +1,22 @@
+<h1>Create a new Unit</h1>
+
+<%= form_with model: @unit do |form| %>
+
+	<div class="mb-3">
+		<%= form.label :name %>
+		<%= form.text_field :name, placeholder: "Unit", class: "form-control"  %>
+	</div>
+
+	<div class="mb-3">
+		<%= form.label :size %>
+		<%= form.text_field :size, placeholder: "400 x 400", class: "form-control"  %>
+	</div>
+
+	<div class="mb-3">
+		<%= form.label :price %>
+		<%= form.number_field :price, in: 10.0..100.0, step: 0.01, placeholder: "9.99", class: "form-control"  %>
+	</div>
+	
+	<%= form.button "Create", class: "btn btn-primary" %>
+
+<% end %>
