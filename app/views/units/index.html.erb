@@ -1,10 +1,18 @@
 <div>
-	<h1>Units</h1>
+	<h1>Units for hire</h1>
 	<% @units.each do |unit| %>
 		<div class="card card-body mb-3" >
-			Name: <%= unit.name %>
-			Size: <%= unit.size %>
-			Price: <%= unit.price %>
+			<div class="row" >
+				<div class="col-3">
+					Name: <%= unit.name %>
+				</div>
+				<div class="col-3">
+					Size: <%= unit.size %>
+				</div>
+				<div class="col-3">
+					Price: <%= unit.price %>
+				</div>
+			</div>
 		</div>
 	<% end %>
 		

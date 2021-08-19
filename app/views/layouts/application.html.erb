@@ -21,6 +21,9 @@
   <body>
     <%= render partial: "shared/navbar" %>
     <div class="container my-3" >
+    <% if notice %>
+      <%= render 'shared/alerts' %>
+    <% end %>
     <%= yield %>
     </div>
     <!-- Bootstrap Bundle with Popper -->
