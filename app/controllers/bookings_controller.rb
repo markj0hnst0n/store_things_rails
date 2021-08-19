@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  before_action :set_unit, only: [:destroy]
+
   def new
     @booking = Booking.new
   end
@@ -16,6 +18,10 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:email, :name, :address, :move_in_date)
+    params.require(:booking).permit(:email, :name, :address, :move_in_date, :unit_id)
+  end
+
+  def set_unit
+    @unit = Unit.find(params[:unit_id])
   end
 end
