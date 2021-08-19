@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_155236) do
+ActiveRecord::Schema.define(version: 2021_08_19_062209) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "unit_id", null: false
+    t.string "email"
+    t.string "name"
+    t.string "address"
+    t.date "move_in_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["unit_id"], name: "index_bookings_on_unit_id"
+  end
 
   create_table "units", force: :cascade do |t|
     t.string "name"
@@ -20,4 +31,5 @@ ActiveRecord::Schema.define(version: 2021_08_18_155236) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "bookings", "units"
 end

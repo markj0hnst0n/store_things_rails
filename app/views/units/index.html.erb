@@ -12,6 +12,9 @@
 				<div class="col-3">
 					Price: <%= unit.price %>
 				</div>
+				<div class="col-3">
+					<%= link_to 'Book Now', new_booking_path, class: "btn btn-primary" %>
+				</div>
 			</div>
 		</div>
 	<% end %>

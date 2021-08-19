@@ -1,0 +1,27 @@
+<h1>New Booking</h1>
+
+<%= form_with model: @booking do |form| %>
+
+	<div class="mb-3">
+		<%= form.label :email %>
+		<%= form.email_field :email, placeholder: "steve@apple.com", class: "form-control"  %>
+	</div>
+
+	<div class="mb-3">
+		<%= form.label :name %>
+		<%= form.text_field :name, placeholder: "Your Name", class: "form-control"  %>
+	</div>
+
+	<div class="mb-3">
+		<%= form.label :address %>
+		<%= form.text_area :address, size: "70x5", placeholder: "62 Soapy Bubble Street", class: "form-control"  %>
+	</div>
+
+	<div class="mb-3">
+		<%= form.label :move_in_date %>
+		<%= form.date_field :move_in_date, class: "form-control"  %>
+	</div>
+	
+	<%= form.button "Book", class: "btn btn-primary" %>
+
+<% end %>
