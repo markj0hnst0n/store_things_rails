@@ -23,16 +23,22 @@ Things you may want to cover:
 
 - Rails version - 6.1.4
 
-- System dependencies
-
-- Configuration
-
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
 - Deployment instructions
+
+Clone the git repo to you local machine.
+
+You will need the correct versions of ruby and rails to run the app.
+
+I recommend using RVM https://rvm.io/rvm/install
+
+Once installed run the following commands:
+
+rvm install ruby 2.7.3
+
+rvm use 2.7.3
+
+gem install rails 6.1.4
+
+Then bundle install.
+
+You should be able to start the server by running the 'rails s' command
